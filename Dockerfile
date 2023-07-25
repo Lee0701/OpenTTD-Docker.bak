@@ -25,6 +25,7 @@ RUN apt-get update && \
 WORKDIR /tmp
 
 COPY src src
+COPY src/.git src/.git
 COPY builder.sh builder.sh
 COPY entrypoint.sh entrypoint.sh
 
