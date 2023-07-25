@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build: ./
+    image: openttd
+    volumes:
+    - ./config:/config
+#    environment:
+#    - loadgame=last-autosave
+    ports:
+    - 3979:3979/tcp
+    - 3979:3979/udp
+    - 3977:3977/tcp
+    - 3977:3977/udp
+    restart: always
